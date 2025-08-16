@@ -8,6 +8,11 @@ function adicionar() {
     let valorUnitario = produto.split('R$')[1];
     let quantidade = document.getElementById('quantidade').value;
 
+    //validar se a quantidade é maior que zero
+    if (quantidade <=0 ) {
+        alert('A quantidade deve ser maior que zero!');
+        return;
+    }
     //calcular o preço, o nosso subproduto
     preço = quantidade * valorUnitario;
  
